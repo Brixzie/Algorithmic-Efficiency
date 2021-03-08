@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="generator.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="demo"></p>
+    <script>
+        var number = prompt("Please enter number of elements", "");
+        var elements = randomNumbers(number); 
+        
+        document.write("Number of elements in array:" + countElements(elements) + "<br>");
+        document.write("<br>Unsorted elements:<br>");
+
+        presentElements(elements);
+        
+        var sortedElements = simpleSort(elements);
+        document.write("<br>Sorted elements:<br>");
+        presentElements(sortedElements);
+    </script>
+
+</body>
+</html>
