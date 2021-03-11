@@ -29,6 +29,47 @@ function countElements(array){
     return array.length;
 }
 
+function meanValue(array){
+    total = 0;
+    mean = 0;
+    n = array.length;
+    for(i = 0; i < n; i++){
+        total = total + array[i];
+    }
+    mean = total / n;
+    return mean;
+}
+
+function probability(p, n){
+    return p * n;
+}
+
+function factorialSimple(x){
+    total = 0;
+    n=x-1;
+    if(x == 0){
+        x = 1;
+    }
+    for(n; n >= 1; n--){
+        total = total + (x * n);
+    }
+    return total;
+}
+
+function factorialRecursive(x){
+    factorial = x;
+    if(factorial == 0){
+        factorial = 1;
+    }
+    for(n = x-1; n >= 1; n--){
+        factorial = factorial * n;
+    }
+    return factorial;
+}
+
+
+
+
 function presentElements(elements){
     for(i = 0; i < elements.length; i++){
         document.write(" " + elements[i] + " - ");
@@ -38,3 +79,9 @@ function presentElements(elements){
     }
     document.write("<br>");
 }
+
+exports.countElements = countElements;
+exports.simpleSort = simpleSort;
+exports.factorialSimple = factorialSimple;
+exports.meanValue = meanValue;
+exports.probability = probability;
